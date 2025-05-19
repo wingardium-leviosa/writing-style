@@ -1,0 +1,260 @@
+/* Evaluator.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f6fb;
+  }
+  
+  .banner {
+    background-color: #4E2A84;
+    color: white;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+  }
+  
+  .close-button {
+    background: transparent;
+    color: white;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: row;
+    height: calc(100vh - 48px);
+    padding: 0 16px;
+    gap: 24px;
+    width: 100vw;
+    box-sizing: border-box;
+  }
+  
+  .left-panel {
+    flex: 1;
+    padding: 24px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+    max-width: 400px;
+  }
+  
+  .tool-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  
+  .tool-button {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 14px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .tool-button:hover {
+    background-color: #f0f4ff;
+  }
+  
+  .editor-box {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .word-count {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 8px;
+  }
+  
+  textarea {
+    flex: 1;
+    padding: 12px;
+    font-size: 14px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    resize: none;
+    min-height: 320px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .right-panel {
+    flex: 2;
+    background-color: #f9fafc;
+    padding: 24px;
+    border-left: 1px solid #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    min-width: 0;
+  }
+  
+  .chart-container {
+    width: 100%;
+    height: 50vh;
+    max-width: 100%;
+    margin-bottom: 24px;
+    box-sizing: border-box;
+  }
+  
+  .sidebar-title {
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+  
+  .sidebar-section {
+    margin-bottom: 16px;
+  }
+  
+  .how-it-works {
+    font-size: 12px;
+    background-color: #ffeaa7;
+    color: #333;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 6px;
+  }
+  
+  .description {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.4;
+  }
+  
+  .got-it-button {
+    background-color: #eef2f7;
+    border: none;
+    padding: 6px 12px;
+    margin-top: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    width: fit-content;
+  }
+  
+  .tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .tab {
+    padding: 6px 12px;
+    border: none;
+    background-color: #f0f0f0;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .tab.active {
+    background-color: #4E2A84;
+    color: white;
+  }
+  
+  .hint-box {
+    flex: 1;
+    background-color: white;
+    border: 1px dashed #ccc;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    font-style: italic;
+    font-size: 14px;
+    padding: 16px;
+  }
+  
+  .footer-right {
+    margin-top: 16px;
+    font-size: 13px;
+    color: #777;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  
+  .upgrade-icon {
+    color: #ff9f43;
+    font-size: 16px;
+  }
+  
+  .side-nav {
+    position: absolute;
+    top: 72px;
+    right: 0;
+    width: 64px;
+    background-color: #1d1e2c;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+    height: calc(100vh - 72px);
+  }
+  
+  .side-nav button {
+    background: none;
+    border: none;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 8px 0;
+    font-size: 12px;
+    cursor: pointer;
+    gap: 4px;
+  }
+  
+  .side-nav button:hover {
+    color: #836EAA;
+  }
+
+  .evaluate-button {
+    margin-top: 16px;
+    background: linear-gradient(135deg, #836EAA, #B6ACD1); /* Purple gradient */
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  }
+  
+  .evaluate-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  }
+  
+  .evaluate-button:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  
